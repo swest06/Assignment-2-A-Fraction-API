@@ -1,6 +1,10 @@
 package fraction;
 
-public class FractionImpl implements Fraction {
+public class FractionImpl implements Fraction{
+    private int numerator;
+    private int denominator;
+
+
     /**
      * Parameters are the <em>numerator</em> and the <em>denominator</em>.
      * Normalize the fraction as you create it.
@@ -13,7 +17,27 @@ public class FractionImpl implements Fraction {
      * @param denominator
      */
     public FractionImpl(int numerator, int denominator) {
-        // TODO
+        int n = numerator;
+        int d = denominator;
+
+        if (denominator == 0){
+            throw new ArithmeticException("Denominator cannot be 0.");
+        }else {
+            int rem;
+            do{
+               rem = denominator % numerator;
+               denominator = numerator;
+               numerator = rem;
+            }while( rem != 0);
+
+            int gCF = denominator;
+
+            this.numerator = n/gCF;
+            this.denominator = d/gCF;
+            // TODO
+        }
+
+
     }
 
     /**
@@ -22,6 +46,8 @@ public class FractionImpl implements Fraction {
      * @param wholeNumber representing the numerator
      */
     public FractionImpl(int wholeNumber) {
+        this.numerator = wholeNumber;
+        this.denominator = 1;
         // TODO
     }
 
