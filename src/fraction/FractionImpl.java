@@ -17,9 +17,11 @@ public class FractionImpl implements Fraction{
      * @param denominator
      */
     public FractionImpl(int numerator, int denominator) {
+        //Stores initial values
         int n = numerator;
         int d = denominator;
 
+        //Euclidean Algorithm for GCD
         if (denominator == 0){
             throw new ArithmeticException("Denominator cannot be 0.");
         }else {
@@ -47,7 +49,6 @@ public class FractionImpl implements Fraction{
     public FractionImpl(int wholeNumber) {
         this.numerator = wholeNumber;
         this.denominator = 1;
-        // TODO
     }
 
     /**
@@ -62,7 +63,45 @@ public class FractionImpl implements Fraction{
      * @param fraction the string representation of the fraction
      */
     public FractionImpl(String fraction) {
-        // TODO
+
+        if (fraction.length() > 2){
+            String[] section = fraction.split("/");
+            int numerator = Integer.parseInt(section[0]);
+            int denominator = Integer.parseInt(section[1]);
+            init(numerator, denominator);
+        }else{
+            int numerator = Integer.parseInt(fraction);
+            init(numerator);
+        }
+    }
+
+    private void init(int numerator) {
+        this.numerator = numerator;
+        this.denominator = 1;
+    }
+
+
+    private void init(int numerator, int denominator) {
+        //Stores initial values
+        int n = numerator;
+        int d = denominator;
+
+        //Euclidean Algorithm for GCD
+        if (denominator == 0){
+            throw new ArithmeticException("Denominator cannot be 0.");
+        }else {
+            int rem;
+            do{
+                rem = denominator % numerator;
+                denominator = numerator;
+                numerator = rem;
+            }while( rem != 0);
+
+            int gCF = denominator;
+
+            this.numerator = n/gCF;
+            this.denominator = d/gCF;
+        }
     }
 
     /**
