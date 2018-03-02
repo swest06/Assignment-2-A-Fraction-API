@@ -1,8 +1,8 @@
 package fraction;
 
 public class FractionImpl implements Fraction{
-    private int numerator;
-    private int denominator;
+    public int numerator;
+    public int denominator;
 
 
     /**
@@ -34,7 +34,6 @@ public class FractionImpl implements Fraction{
 
             this.numerator = n/gCF;
             this.denominator = d/gCF;
-            // TODO
         }
 
 
