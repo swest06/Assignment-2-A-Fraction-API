@@ -1,8 +1,9 @@
 package fraction;
 
-public class FractionImpl implements Fraction{
-    public int numerator;
-    public int denominator;
+
+public class FractionImpl implements Fraction, Comparable{
+    private int numerator;
+    private int denominator;
 
 
     /**
@@ -86,7 +87,7 @@ public class FractionImpl implements Fraction{
         int n = numerator;
         int d = denominator;
 
-        //Euclidean Algorithm for GCD
+        //Euclidean Algorithm for GCF
         if (denominator == 0){
             throw new ArithmeticException("Denominator cannot be 0.");
         }else {
@@ -109,7 +110,19 @@ public class FractionImpl implements Fraction{
      */
     @Override
     public Fraction add(Fraction f) {
-        return null;
+        int a = this.numerator;
+        int b = this.denominator;
+        int c = f.numerator;
+        int d = f.denominator;
+
+
+        double sumDec = (a*b + b*c)/ b*d;
+        sumDec = sumDec*100;
+        int sum = (int) sumDec;
+        Fraction frac = new FractionImpl(sum, 100);
+
+        
+        return frac;
     }
 
     /**
