@@ -110,18 +110,21 @@ public class FractionImpl implements Fraction, Comparable{
      */
     @Override
     public Fraction add(Fraction f) {
+        //Assign Variables
         int a = this.numerator;
         int b = this.denominator;
         int c = f.numerator;
         int d = f.denominator;
 
-
+        //Add fractions
         double sumDec = (a*b + b*c)/ b*d;
         sumDec = sumDec*100;
         int sum = (int) sumDec;
+
+        //Normalise fraction
         Fraction frac = new FractionImpl(sum, 100);
 
-        
+        //TODO
         return frac;
     }
 
@@ -130,7 +133,21 @@ public class FractionImpl implements Fraction, Comparable{
      */
     @Override
     public Fraction subtract(Fraction f) {
-        return null;
+        //Assign Variables
+        int a = this.numerator;
+        int b = this.denominator;
+        int c = f.numerator;
+        int d = f.denominator;
+
+        //Subtract fractions
+        double sumDec = (a*b - b*c)/ b*d;
+        int sum = (int) sumDec;
+
+        //Normalise fraction
+        Fraction frac = new FractionImpl(sum, 100);
+        //TODO
+
+        return frac;
     }
 
     /**
