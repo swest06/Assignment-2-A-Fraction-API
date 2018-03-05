@@ -124,10 +124,11 @@ public class FractionImpl implements Fraction, Comparable{
         int sum = (int) sumDec;
 
         //Normalise fraction
-        Fraction frac = new FractionImpl(sum, 100);
+        FractionImpl frac = new FractionImpl(sum, 100);
+        Fraction fract = (Fraction)frac;
 
         //TODO
-        return frac;
+        return fract;
     }
 
     /**
@@ -169,9 +170,15 @@ public class FractionImpl implements Fraction, Comparable{
         int d = f1.denominator;
 
         //Multiply fractions
-        double sumDec = 
+        double sumDec = (a*c) / (b*d);
+        sumDec = sumDec * 100;
+        int sum = (int) sumDec;
 
-        return null;
+        //Normalise fraction
+        FractionImpl frac = new FractionImpl(sum, 100);
+
+
+        return frac;
     }
 
     /**
