@@ -29,17 +29,43 @@ public class FractionTest{
 
     @Test
     public void testAdd() {
-        FractionImpl f = new FractionImpl(1,2);
-        Fraction frac1 = (Fraction)f;
+        //Expected answer
+        FractionImpl frac1 = new FractionImpl(1,2);
 
-        FractionImpl g = new FractionImpl(1,4);
-        Fraction frac2 = (Fraction)g;
+        //Objects/Arguments
+        FractionImpl frac2 = new FractionImpl(1,4);
+        FractionImpl frac3 = new FractionImpl(1,4);
 
-        FractionImpl h = new FractionImpl(1,4);
-        Fraction frac3 = (Fraction)h;
-
+        //Test
         assertEquals(frac1, frac2.add(frac3));
+
         // Tests that are expected to succeed or fail
+    }
+
+    @Test
+    public void testSubtract() {
+        //Expected answer
+        FractionImpl frac1 = new FractionImpl(1,4);
+
+        //Objects/Arguments
+        FractionImpl frac2 = new FractionImpl(1,2);
+        FractionImpl frac3 = new FractionImpl(1,4);
+
+        //Test
+        assertEquals(frac1, frac2.subtract(frac3));
+    }
+
+    @Test
+    public void testMultiply() {
+        //Expected answer
+        FractionImpl frac1 = new FractionImpl(3, 4);
+
+        //Objects/Arguments
+        FractionImpl frac2 = new FractionImpl(1,4);
+        FractionImpl frac3 = new FractionImpl(1,2);
+
+        //Test
+        assertEquals(frac1, frac2.multiply(frac3));
     }
 
     @Test(expected = ArithmeticException.class)
