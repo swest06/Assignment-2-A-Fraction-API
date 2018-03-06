@@ -110,6 +110,7 @@ public class FractionImpl implements Fraction, Comparable{
      */
     @Override
     public Fraction add(Fraction f) {
+        //Typecast argument
         FractionImpl f1 = (FractionImpl)f;
 
         //Assign Variables
@@ -125,10 +126,9 @@ public class FractionImpl implements Fraction, Comparable{
 
         //Normalise fraction
         FractionImpl frac = new FractionImpl(sum, 100);
-        Fraction fract = (Fraction)frac;
 
         //TODO
-        return fract;
+        return frac;
     }
 
     /**
@@ -136,6 +136,7 @@ public class FractionImpl implements Fraction, Comparable{
      */
     @Override
     public Fraction subtract(Fraction f) {
+        //Typecast argument
         FractionImpl f1 = (FractionImpl)f;
 
         //Assign Variables
@@ -161,6 +162,7 @@ public class FractionImpl implements Fraction, Comparable{
      */
     @Override
     public Fraction multiply(Fraction f) {
+        //Typecast argument
         FractionImpl f1 = (FractionImpl)f;
 
         //Assign Variables
@@ -186,6 +188,7 @@ public class FractionImpl implements Fraction, Comparable{
      */
     @Override
     public Fraction divide(Fraction f) {
+        //Typecast argument
         return null;
     }
 

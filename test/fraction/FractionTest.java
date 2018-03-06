@@ -68,6 +68,19 @@ public class FractionTest{
         assertEquals(frac1, frac2.multiply(frac3));
     }
 
+    @Test
+    public void testDivide(){
+        //Expected answer
+        FractionImpl frac1 = new FractionImpl(3,1);
+
+        //Objects/Arguments
+        FractionImpl frac2 = new FractionImpl(1,2);
+        FractionImpl frac3 =new FractionImpl(1,6);
+
+        //Test
+        assertEquals(frac1, frac2.divide(frac3));
+    }
+
     @Test(expected = ArithmeticException.class)
     public void testDivideByZero() {
         // test that should throw an ArithmeticException
