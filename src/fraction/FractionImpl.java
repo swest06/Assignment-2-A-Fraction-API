@@ -189,7 +189,23 @@ public class FractionImpl implements Fraction, Comparable{
     @Override
     public Fraction divide(Fraction f) {
         //Typecast argument
-        return null;
+        FractionImpl f1 = (FractionImpl)f;
+
+        //Assign Variables
+        int a = this.numerator;
+        int b = this.denominator;
+        int c = f1.numerator;
+        int d = f1.denominator;
+
+        //Divide fractions
+        double sumDec = (a*d) / (b*c);
+        sumDec = sumDec * 100;
+        int sum = (int) sumDec;
+
+        //Normalise fraction
+        FractionImpl result = new FractionImpl(sum, 100);
+
+        return result;
     }
 
     /**
