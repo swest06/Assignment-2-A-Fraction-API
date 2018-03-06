@@ -214,8 +214,25 @@ public class FractionImpl implements Fraction, Comparable{
     @Override
     public Fraction abs() {
         //Should return a double
+        FractionImpl f1 = (FractionImpl)this;
 
-        return null;
+        //Assign Variables
+        int a = this.numerator;
+        int b = this.denominator;
+
+        //Find abs
+        double sumDec = a/b;
+        if (sumDec < 0) {
+            sumDec = (sumDec) - (sumDec * 2);
+        }
+        sumDec = sumDec * 100;
+        int sum = (int) sumDec;
+
+        //Normalise fraction
+        FractionImpl result = new FractionImpl(sum, 100);
+
+
+        return result;
     }
 
     /**
