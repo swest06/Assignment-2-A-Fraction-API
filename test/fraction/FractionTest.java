@@ -81,6 +81,20 @@ public class FractionTest{
         assertEquals(frac1, frac2.divide(frac3));
     }
 
+    @Test
+    public void testAbs(){
+        //Expected answers
+        FractionImpl awns = new FractionImpl(1,4);
+
+        //Objects/Arguments
+        FractionImpl frac1 = new FractionImpl(1,4);
+        FractionImpl frac2 = new FractionImpl(-1,4);
+
+        //Test
+        assertEquals(awns, frac1.abs());
+        assertEquals(awns, frac2.abs());
+    }
+
     @Test(expected = ArithmeticException.class)
     public void testDivideByZero() {
         // test that should throw an ArithmeticException

@@ -120,7 +120,7 @@ public class FractionImpl implements Fraction, Comparable{
         int d = f1.denominator;
 
         //Add fractions
-        double sumDec = (a*b + b*c)/ b*d;
+        double sumDec = (a*b + b*c)/ (b*d);
         sumDec = sumDec*100;
         int sum = (int) sumDec;
 
@@ -146,7 +146,7 @@ public class FractionImpl implements Fraction, Comparable{
         int d = f1.denominator;
 
         //Subtract fractions
-        double sumDec = (a*b - b*c)/ b*d;
+        double sumDec = (a*b - b*c)/ (b*d);
         sumDec = sumDec * 100;
         int sum = (int) sumDec;
 
@@ -213,6 +213,8 @@ public class FractionImpl implements Fraction, Comparable{
      */
     @Override
     public Fraction abs() {
+        //Should return a double
+
         return null;
     }
 
