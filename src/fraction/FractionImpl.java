@@ -120,6 +120,7 @@ public class FractionImpl implements Fraction, Comparable{
         int d = f1.denominator;
 
         //Add fractions
+        //sumDec = sum as decimal
         double sumDec = (a*b + b*c)/ (b*d);
         sumDec = sumDec*100;
         int sum = (int) sumDec;
@@ -231,7 +232,6 @@ public class FractionImpl implements Fraction, Comparable{
         //Normalise fraction
         FractionImpl result = new FractionImpl(sum, 100);
 
-
         return result;
     }
 
@@ -240,7 +240,22 @@ public class FractionImpl implements Fraction, Comparable{
      */
     @Override
     public Fraction negate() {
-        return null;
+        //Typecast object
+        FractionImpl f1 = (FractionImpl)this;
+
+        //Assign Variables
+        int a = this.numerator;
+        int b = this.denominator;
+
+        //Negate
+        double sumDec = a/b;
+        sumDec = (sumDec) - (sumDec * 2);
+        sumDec = sumDec * 100;
+        int sum = (int) sumDec;
+
+        //Normalise fraction
+        FractionImpl result = new FractionImpl(sum, 100);
+        return result;
     }
 
     /**

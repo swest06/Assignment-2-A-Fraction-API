@@ -12,7 +12,7 @@ public class FractionTest{
 
     // complete the tests and add more
     // Tests that are expected to succeed or fail
-    
+
     @Test
     public void testFractionImpl() {
 //        assertEquals(2, frac1.numerator);
