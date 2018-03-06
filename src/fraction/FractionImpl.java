@@ -213,7 +213,7 @@ public class FractionImpl implements Fraction, Comparable{
      */
     @Override
     public Fraction abs() {
-        //Should return a double
+        //Typecast object
         FractionImpl f1 = (FractionImpl)this;
 
         //Assign Variables
