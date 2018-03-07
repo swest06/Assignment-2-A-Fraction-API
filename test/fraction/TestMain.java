@@ -10,12 +10,8 @@ public class TestMain {
         FractionImpl frac1 = new FractionImpl(1,2);
         FractionImpl frac2 = new FractionImpl(1,4);
 
-        Fraction fracA = (Fraction)frac1;
-        Fraction fracB = (Fraction)frac2;
 
-
-
-        Fraction fracSum = fracA.add(fracB);
+        Fraction fracSum = frac1.subtract(frac2);
         System.out.println(fracSum);
     }
 }

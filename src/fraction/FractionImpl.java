@@ -157,7 +157,11 @@ public class FractionImpl implements Fraction{
         int d = f1.denominator;
 
         //Subtract fractions
-        double sumDec = (a*b - b*c)/ (b*d);
+        int x = (a*d - b*c);
+        int y = (b*d);
+
+        double sumDec = (float)x / y;
+
         sumDec = sumDec * 100;
         int sum = (int) sumDec;
 
