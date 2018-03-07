@@ -1,9 +1,10 @@
 package fraction;
 
 
-public class FractionImpl implements Fraction, Comparable{
-    private int numerator;
-    private int denominator;
+public class FractionImpl implements Fraction{
+    //CHANGE BACK TO PRIVATE
+    public int numerator;
+    public int denominator;
 
 
     /**
@@ -27,9 +28,12 @@ public class FractionImpl implements Fraction, Comparable{
             throw new ArithmeticException("Denominator cannot be 0.");
         }else {
             int rem;
+
             do{
+                //FIX HERE!
                rem = denominator % numerator;
-               denominator = numerator;
+               //System.out.println("HERE");
+                denominator = numerator;
                numerator = rem;
             }while( rem != 0);
 
@@ -74,7 +78,7 @@ public class FractionImpl implements Fraction, Comparable{
             int numerator = Integer.parseInt(fraction);
             init(numerator);
         }
-    }
+}
 
     private void init(int numerator) {
         this.numerator = numerator;
@@ -111,21 +115,27 @@ public class FractionImpl implements Fraction, Comparable{
     @Override
     public Fraction add(Fraction f) {
         //Typecast argument
+        FractionImpl f0 = (FractionImpl)this;
         FractionImpl f1 = (FractionImpl)f;
 
         //Assign Variables
-        int a = this.numerator;
-        int b = this.denominator;
+        int a = f0.numerator;
+        int b = f0.denominator;
         int c = f1.numerator;
         int d = f1.denominator;
 
         //Add fractions
         //sumDec = sum as decimal
-        double sumDec = (a*b + b*c)/ (b*d);
+
+        int x = (a*d + b*c);
+        int y = (b*d);
+        double sumDec = (float)x / y;
+
         sumDec = sumDec*100;
         int sum = (int) sumDec;
 
         //Normalise fraction
+        //Rewrite
         FractionImpl frac = new FractionImpl(sum, 100);
 
         //TODO

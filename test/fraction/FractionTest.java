@@ -15,17 +15,17 @@ public class FractionTest{
 
     @Test
     public void testFractionImpl() {
-//        assertEquals(2, frac1.numerator);
-//        assertEquals(5, frac1.denominator);
-//
-//        assertEquals(2, frac2.numerator);
-//        assertEquals(1, frac2.denominator);
-//
-//        assertEquals(2, frac3.numerator);
-//        assertEquals(5, frac3.denominator);
-//
-//        assertEquals(2, frac4.numerator);
-//        assertEquals(1, frac4.denominator);
+        assertEquals(2, frac1.numerator);
+        assertEquals(5, frac1.denominator);
+
+        assertEquals(2, frac2.numerator);
+        assertEquals(1, frac2.denominator);
+
+        assertEquals(2, frac3.numerator);
+        assertEquals(5, frac3.denominator);
+
+        assertEquals(2, frac4.numerator);
+        assertEquals(1, frac4.denominator);
         //TODO
     }
 
@@ -47,7 +47,7 @@ public class FractionTest{
     @Test
     public void testSubtract() {
         //Expected answer
-        FractionImpl frac1 = new FractionImpl(1,4);
+        Fraction frac1 = new FractionImpl(1,4);
 
         //Objects/Arguments
         FractionImpl frac2 = new FractionImpl(1,2);
