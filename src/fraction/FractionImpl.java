@@ -187,7 +187,12 @@ public class FractionImpl implements Fraction{
         int d = f1.denominator;
 
         //Multiply fractions
-        double sumDec = (a*c) / (b*d);
+        int x = (a*c);
+        int y = (b*d);
+
+        double sumDec = (float)x / y;
+
+        //double sumDec = (a*c) / (b*d);
         sumDec = sumDec * 100;
         int sum = (int) sumDec;
 
@@ -213,7 +218,10 @@ public class FractionImpl implements Fraction{
         int d = f1.denominator;
 
         //Divide fractions
-        double sumDec = (a*d) / (b*c);
+        int x = (a*d);
+        int y = (b*c);
+
+        double sumDec = (float)x / y;
         sumDec = sumDec * 100;
         int sum = (int) sumDec;
 
@@ -236,7 +244,7 @@ public class FractionImpl implements Fraction{
         int b = this.denominator;
 
         //Find abs
-        double sumDec = a/b;
+        double sumDec = (float)a/b;
         if (sumDec < 0) {
             sumDec = (sumDec) - (sumDec * 2);
         }
@@ -262,7 +270,7 @@ public class FractionImpl implements Fraction{
         int b = this.denominator;
 
         //Negate
-        double sumDec = a/b;
+        double sumDec = (float)a/b;
         sumDec = (sumDec) - (sumDec * 2);
         sumDec = sumDec * 100;
         int sum = (int) sumDec;
