@@ -3,8 +3,8 @@ package fraction;
 
 public class FractionImpl implements Fraction{
     //CHANGE BACK TO PRIVATE
-    public int numerator;
-    public int denominator;
+    private int numerator;
+    private int denominator;
 
 
     /**
