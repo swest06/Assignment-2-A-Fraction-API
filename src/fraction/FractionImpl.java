@@ -310,9 +310,14 @@ public class FractionImpl implements Fraction{
      */
     @Override
     public Fraction inverse() {
+        //Assign Variables
         int a = this.numerator;
         int b = this.numerator;
-        return null;
+
+        //Inverse
+        FractionImpl result = new FractionImpl(b,a);
+
+        return result;
     }
 
     /**
