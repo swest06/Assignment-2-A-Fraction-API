@@ -137,7 +137,8 @@ public class FractionImpl implements Fraction{
         //Normalise fraction
         //Rewrite
         FractionImpl frac = new FractionImpl(sum, 100);
-
+        System.out.println(frac.numerator);
+        System.out.println(frac.denominator);
         //TODO
         return frac;
     }
@@ -309,6 +310,8 @@ public class FractionImpl implements Fraction{
      */
     @Override
     public Fraction inverse() {
+        int a = this.numerator;
+        int b = this.numerator;
         return null;
     }
 
@@ -317,6 +320,7 @@ public class FractionImpl implements Fraction{
      */
     @Override
     public int compareTo(Fraction o) {
+
         return 0;
     }
 

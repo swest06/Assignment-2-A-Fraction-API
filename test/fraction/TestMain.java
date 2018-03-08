@@ -7,11 +7,13 @@ public class TestMain {
     }
 
     public  void run(){
-        FractionImpl frac1 = new FractionImpl(1,2);
+        FractionImpl frac1 = new FractionImpl(1,4);
         FractionImpl frac2 = new FractionImpl(1,4);
 
 
-        Fraction fracSum = frac1.subtract(frac2);
-        System.out.println(fracSum);
+        //Fraction fracSum = frac1.add(frac2);
+        System.out.println(frac1.equals(frac2));
+
+
     }
 }
