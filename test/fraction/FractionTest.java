@@ -7,7 +7,10 @@ public class FractionTest{
     FractionImpl frac1 = new FractionImpl(1, 4);
     FractionImpl frac2 = new FractionImpl(1,2);
     FractionImpl frac3 = new FractionImpl(2,4);
-//    FractionImpl frac3 = new FractionImpl("12/30");
+    FractionImpl frac4 = new FractionImpl(2,1);
+    FractionImpl frac5 = new FractionImpl(-2);
+
+    //    FractionImpl frac3 = new FractionImpl("12/30");
 //    FractionImpl frac4 = new FractionImpl("2");
 
 
@@ -134,11 +137,15 @@ public class FractionTest{
 
     @Test
     public void testToString(){
-        String x = "1/4";
-        String y = "1/2";
+        String a = "1/4";
+        String b = "1/2";
+        String x = "2";
+        String y = "-2";
 
-        assertTrue(frac1.toString().equals(x));
-        assertTrue(frac2.toString().equals(y));
+        assertTrue(frac1.toString().equals(a));
+        assertTrue(frac2.toString().equals(b));
+        assertTrue(frac3.toString().equals(x));
+        assertTrue(frac4.toString().equals(y));
     }
 
     @Test(expected = ArithmeticException.class)

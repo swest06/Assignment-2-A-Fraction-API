@@ -348,6 +348,10 @@ public class FractionImpl implements Fraction{
      */
     @Override
     public String toString() {
+        int a = this.numerator;
+        int b = this.denominator;
+
+        String result = a + "/" + b;
         return null;
     }
 }
