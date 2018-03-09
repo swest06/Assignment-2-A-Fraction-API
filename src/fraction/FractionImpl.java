@@ -351,7 +351,16 @@ public class FractionImpl implements Fraction{
         int a = this.numerator;
         int b = this.denominator;
 
-        String result = a + "/" + b;
-        return null;
+        String result;
+
+        if(b > 1){
+            result = a + "/" + b;
+        }else if (b == 0){
+            result = "0";
+        }else {
+            result = "a";
+        }
+        
+        return result;
     }
 }

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="caaed0f5-a808-4c79-9877-c21630565e5a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/fraction/FractionImpl.java" afterPath="$PROJECT_DIR$/src/fraction/FractionImpl.java" />
-      <change beforePath="$PROJECT_DIR$/test/fraction/FractionTest.java" afterPath="$PROJECT_DIR$/test/fraction/FractionTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FractionImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FractionImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fraction/FractionImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="352" column="0" lean-forward="true" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
+            <state relative-caret-position="353">
+              <caret line="362" column="8" lean-forward="true" selection-start-line="362" selection-start-column="8" selection-end-line="362" selection-end-column="8" />
               <folding>
                 <element signature="e#7121#7122#0" expanded="true" />
                 <element signature="e#7160#7161#0" expanded="true" />
@@ -40,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FractionTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FractionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/fraction/FractionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+            <state relative-caret-position="64">
+              <caret line="140" column="25" lean-forward="true" selection-start-line="140" selection-start-column="25" selection-end-line="140" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,8 +86,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/fraction/Fraction.java" />
         <option value="$PROJECT_DIR$/test/fraction/TestMain.java" />
-        <option value="$PROJECT_DIR$/src/fraction/FractionImpl.java" />
         <option value="$PROJECT_DIR$/test/fraction/FractionTest.java" />
+        <option value="$PROJECT_DIR$/src/fraction/FractionImpl.java" />
       </list>
     </option>
   </component>
@@ -400,7 +399,7 @@
       <updated>1517090213480</updated>
       <workItem from="1517090215775" duration="2850000" />
       <workItem from="1517094296111" duration="39000" />
-      <workItem from="1519750962275" duration="69392000" />
+      <workItem from="1519750962275" duration="70029000" />
     </task>
     <servers />
   </component>
@@ -437,7 +436,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72281000" />
+    <option name="totallyTimeSpent" value="72918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -554,25 +553,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/fraction/FractionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="140" column="25" lean-forward="true" selection-start-line="140" selection-start-column="25" selection-end-line="140" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fraction/FractionImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="352" column="0" lean-forward="true" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
+        <state relative-caret-position="353">
+          <caret line="362" column="8" lean-forward="true" selection-start-line="362" selection-start-column="8" selection-end-line="362" selection-end-column="8" />
           <folding>
             <element signature="e#7121#7122#0" expanded="true" />
             <element signature="e#7160#7161#0" expanded="true" />
             <element signature="e#7250#7251#0" expanded="true" />
             <element signature="e#7290#7291#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fraction/FractionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
