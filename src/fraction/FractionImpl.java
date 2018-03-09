@@ -137,8 +137,8 @@ public class FractionImpl implements Fraction{
         //Normalise fraction
         //Rewrite
         FractionImpl frac = new FractionImpl(sum, 100);
-        System.out.println(frac.numerator);
-        System.out.println(frac.denominator);
+        //System.out.println(frac.numerator);
+        //System.out.println(frac.denominator);
         //TODO
         return frac;
     }
@@ -325,8 +325,23 @@ public class FractionImpl implements Fraction{
      */
     @Override
     public int compareTo(Fraction o) {
+        //Typecast
+        FractionImpl f1 = (FractionImpl) o;
 
-        return 0;
+        //Assign values
+        double x = (float)this.numerator / this.denominator;
+        double y = (float)f1.numerator/ f1.denominator;
+        int result;
+
+        if (x > y ){
+            result = 1;
+        }else if (x < y){
+            result = -1;
+        }else{
+            result = 0;
+        }
+
+        return result;
     }
 
     /**

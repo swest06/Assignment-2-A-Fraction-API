@@ -11,8 +11,10 @@ public class TestMain {
         FractionImpl frac2 = new FractionImpl(1,4);
 
 
-        //Fraction fracSum = frac1.add(frac2);
-        System.out.println(frac1.equals(frac2));
+        Fraction fracSum = frac1.add(frac2);
+        System.out.println(frac2.compareTo(fracSum));
+        //System.out.println(frac1.add(frac2));
+        //System.out.println(fracSum.getClass().getName());
 
 
     }

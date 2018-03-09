@@ -4,10 +4,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class FractionTest{
-    FractionImpl frac1 = new FractionImpl(12, 30);
-    FractionImpl frac2 = new FractionImpl(2);
-    FractionImpl frac3 = new FractionImpl("12/30");
-    FractionImpl frac4 = new FractionImpl("2");
+    FractionImpl frac1 = new FractionImpl(1, 4);
+    FractionImpl frac2 = new FractionImpl(1,2);
+    FractionImpl frac3 = new FractionImpl(2,4);
+//    FractionImpl frac3 = new FractionImpl("12/30");
+//    FractionImpl frac4 = new FractionImpl("2");
 
 
     // complete the tests and add more
@@ -122,6 +123,13 @@ public class FractionTest{
 
         //Test
         assertEquals(ans1, frac1.inverse());
+    }
+
+    @Test
+    public void testCompareTo(){
+        assertEquals(-1, frac1.compareTo(frac2));
+        assertEquals(1, frac2.compareTo(frac1));
+        assertEquals(0, frac2.compareTo(frac3));
     }
 
     @Test(expected = ArithmeticException.class)
