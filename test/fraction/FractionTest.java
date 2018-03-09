@@ -132,6 +132,15 @@ public class FractionTest{
         assertEquals(0, frac2.compareTo(frac3));
     }
 
+    @Test
+    public void testToString(){
+        String x = "1/4";
+        String y = "1/2";
+
+        assertTrue(frac1.toString().equals(x));
+        assertTrue(frac2.toString().equals(y));
+    }
+
     @Test(expected = ArithmeticException.class)
     public void testDivideByZero() {
         // test that should throw an ArithmeticException

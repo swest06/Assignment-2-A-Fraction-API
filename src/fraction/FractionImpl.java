@@ -200,7 +200,6 @@ public class FractionImpl implements Fraction{
         //Normalise fraction
         FractionImpl frac = new FractionImpl(sum, 100);
 
-
         return frac;
     }
 
