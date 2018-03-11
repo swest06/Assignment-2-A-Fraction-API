@@ -293,7 +293,20 @@ public class FractionImpl implements Fraction{
      */
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        int value = 1;
+        boolean result;
+        if (obj instanceof Fraction){
+            FractionImpl frac = (FractionImpl)obj;
+            value = this.compareTo(frac);
+        }else {
+            throw new ClassCastException();
+        }
+        if (value == 0){
+            result = true;
+        }else {
+            result = false;
+        }
+        return result;
     }
 
     /**
@@ -360,7 +373,7 @@ public class FractionImpl implements Fraction{
         }else {
             result = "a";
         }
-        
+
         return result;
     }
 }

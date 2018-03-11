@@ -148,6 +148,16 @@ public class FractionTest{
         assertTrue(frac4.toString().equals(y));
     }
 
+    @Test
+    public void testEquals(){
+        FractionImpl frac1 = new FractionImpl(1,2);
+        FractionImpl frac2 = new FractionImpl(1,2);
+        FractionImpl frac3 = new FractionImpl(1,4);
+
+        assertTrue(frac1.equals(frac2));
+        assertFalse(frac1.equals(frac3));
+    }
+
     @Test(expected = ArithmeticException.class)
     public void testDivideByZero() {
         // test that should throw an ArithmeticException
