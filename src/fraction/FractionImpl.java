@@ -78,12 +78,20 @@ public class FractionImpl implements Fraction{
         }
 }
 
+    /**
+     *
+     * @param numerator representing the whole number
+     */
     private void init(int numerator) {
         this.numerator = numerator;
         this.denominator = 1;
     }
 
-
+    /**
+     * Parameters are the <em>numerator</em> and the <em>denominator</em>.
+     * @param numerator
+     * @param denominator
+     */
     private void init(int numerator, int denominator) {
         //Stores initial values
         int n = numerator;
@@ -109,6 +117,9 @@ public class FractionImpl implements Fraction{
 
     /**
      * @inheritDoc
+     * Adds 2 fraction objects (sum = 'this' + 'that')
+     * @param f fraction object
+     * @return returns sum of this and that
      */
     @Override
     public Fraction add(Fraction f) {
@@ -140,6 +151,9 @@ public class FractionImpl implements Fraction{
 
     /**
      * @inheritDoc
+     * Subtracts 1 fraction from another (sum = 'this' - 'that')
+     * @param f fraction object
+     * @return returns 'this' minus 'that'
      */
     @Override
     public Fraction subtract(Fraction f) {
@@ -169,6 +183,9 @@ public class FractionImpl implements Fraction{
 
     /**
      * @inheritDoc
+     * Multiplies 2 fractions (sum = 'this' * 'that')
+     * @param f fraction object
+     * @return returns 'this' minus 'that'
      */
     @Override
     public Fraction multiply(Fraction f) {
@@ -199,6 +216,9 @@ public class FractionImpl implements Fraction{
 
     /**
      * @inheritDoc
+     * Divides 1 fraction from another (sum = 'this' / 'that')
+     * @param f fraction object
+     * @return returns 'this' divided by 'that'
      */
     @Override
     public Fraction divide(Fraction f) {
@@ -227,6 +247,8 @@ public class FractionImpl implements Fraction{
 
     /**
      * @inheritDoc
+     * Returns absolute value of object as a fraction
+     * @return returns absolute value of 'this'
      */
     @Override
     public Fraction abs() {
@@ -253,6 +275,8 @@ public class FractionImpl implements Fraction{
 
     /**
      * @inheritDoc
+     * negates fraction ex 1/4 to -1/4
+     * @return returns negation of 'this'
      */
     @Override
     public Fraction negate() {
@@ -284,6 +308,9 @@ public class FractionImpl implements Fraction{
 
     /**
      * @inheritDoc
+     * Shows if 1 fraction is equal to another
+     * @param obj object
+     * @return returns true if 'this' has the same value as 'that'
      */
     @Override
     public boolean equals(Object obj) {
@@ -305,6 +332,8 @@ public class FractionImpl implements Fraction{
 
     /**
      * @inheritDoc
+     * Creates new Fraction object with same value as 'this'
+     * @return returns new Fraction object with same value as 'this'
      */
     @Override
     protected Object clone() throws CloneNotSupportedException {
@@ -313,6 +342,8 @@ public class FractionImpl implements Fraction{
 
     /**
      * @inheritDoc
+     * inverses Fraction object (1/4 to 4/1)
+     * @return returns inverse of 'this'
      */
     @Override
     public Fraction inverse() {
@@ -328,6 +359,9 @@ public class FractionImpl implements Fraction{
 
     /**
      * @inheritDoc
+     * Compares two Fraction objects
+     * @param o fraction object
+     * @return returns '0' if objects are equal
      */
     @Override
     public int compareTo(Fraction o) {
@@ -352,6 +386,8 @@ public class FractionImpl implements Fraction{
 
     /**
      * @inheritDoc
+     * Converts Fraction object to String
+     * @return returns String of 'this'
      */
     @Override
     public String toString() {
