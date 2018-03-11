@@ -10,28 +10,9 @@ public class FractionTest{
     FractionImpl frac4 = new FractionImpl(2,1);
     FractionImpl frac5 = new FractionImpl(-2);
 
-    //    FractionImpl frac3 = new FractionImpl("12/30");
-//    FractionImpl frac4 = new FractionImpl("2");
-
-
     // complete the tests and add more
     // Tests that are expected to succeed or fail
 
-    @Test
-    public void testFractionImpl() {
-//        assertEquals(2, frac1.numerator);
-//        assertEquals(5, frac1.denominator);
-//
-//        assertEquals(2, frac2.numerator);
-//        assertEquals(1, frac2.denominator);
-//
-//        assertEquals(2, frac3.numerator);
-//        assertEquals(5, frac3.denominator);
-//
-//        assertEquals(2, frac4.numerator);
-//        assertEquals(1, frac4.denominator);
-//        //TODO
-    }
 
     @Test
     public void testAdd() {
@@ -63,15 +44,13 @@ public class FractionTest{
 
     @Test
     public void testMultiply() {
-        //Expected answer
-        FractionImpl frac1 = new FractionImpl(3, 4);
 
         //Objects/Arguments
         FractionImpl frac2 = new FractionImpl(1,4);
-        FractionImpl frac3 = new FractionImpl(1,2);
+        FractionImpl frac3 = new FractionImpl(2,1);
 
         //Test
-        assertEquals(frac1, frac2.multiply(frac3));
+        assertEquals("1/2", frac2.multiply(frac3).toString());
     }
 
     @Test
@@ -139,13 +118,10 @@ public class FractionTest{
     public void testToString(){
         String a = "1/4";
         String b = "1/2";
-        String x = "2";
-        String y = "-2";
 
         assertTrue(frac1.toString().equals(a));
         assertTrue(frac2.toString().equals(b));
-        assertTrue(frac3.toString().equals(x));
-        assertTrue(frac4.toString().equals(y));
+        assertTrue(frac3.toString().equals(b));
     }
 
     @Test
@@ -160,6 +136,7 @@ public class FractionTest{
 
     @Test(expected = ArithmeticException.class)
     public void testDivideByZero() {
-        // test that should throw an ArithmeticException
+        FractionImpl frac1 = new FractionImpl(1,0);
+        FractionImpl frac2 = new FractionImpl(0,0);
     }
 }

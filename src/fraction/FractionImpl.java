@@ -2,7 +2,7 @@ package fraction;
 
 
 public class FractionImpl implements Fraction{
-    //CHANGE BACK TO PRIVATE
+
     private int numerator;
     private int denominator;
 
@@ -30,9 +30,7 @@ public class FractionImpl implements Fraction{
             int rem;
 
             do{
-                //FIX HERE!
                rem = denominator % numerator;
-               //System.out.println("HERE");
                 denominator = numerator;
                numerator = rem;
             }while( rem != 0);
@@ -135,11 +133,8 @@ public class FractionImpl implements Fraction{
         int sum = (int) sumDec;
 
         //Normalise fraction
-        //Rewrite
         FractionImpl frac = new FractionImpl(sum, 100);
-        //System.out.println(frac.numerator);
-        //System.out.println(frac.denominator);
-        //TODO
+
         return frac;
     }
 
@@ -168,7 +163,6 @@ public class FractionImpl implements Fraction{
 
         //Normalise fraction
         FractionImpl frac = new FractionImpl(sum, 100);
-        //TODO
 
         return frac;
     }
@@ -324,7 +318,7 @@ public class FractionImpl implements Fraction{
     public Fraction inverse() {
         //Assign Variables
         int a = this.numerator;
-        int b = this.numerator;
+        int b = this.denominator;
 
         //Inverse
         FractionImpl result = new FractionImpl(b,a);
@@ -366,12 +360,14 @@ public class FractionImpl implements Fraction{
 
         String result;
 
-        if(b > 1){
-            result = a + "/" + b;
-        }else if (b == 0){
+        if (a == 0){
             result = "0";
-        }else {
-            result = "a";
+        }else{
+            if (b == 1){
+                result = ""+a;
+            }else{
+                result = ""+a+"/"+b;
+            }
         }
 
         return result;
