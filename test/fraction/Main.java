@@ -1,9 +1,9 @@
 package fraction;
 
-public class TestMain {
+public class Main {
 
     public static void main(String[] args){
-        new TestMain().run();
+        new Main().run();
     }
 
     public  void run(){
