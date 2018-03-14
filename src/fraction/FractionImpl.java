@@ -67,7 +67,7 @@ public class FractionImpl implements Fraction{
      */
     public FractionImpl(String fraction) {
 
-        if (fraction.length() > 2){
+        if (fraction.contains("/") == true){
             String[] section = fraction.split("/");
             int numerator = Integer.parseInt(section[0]);
             int denominator = Integer.parseInt(section[1]);
@@ -128,8 +128,8 @@ public class FractionImpl implements Fraction{
         FractionImpl f1 = (FractionImpl)f;
 
         //Assign Variables
-        int a = f0.numerator;
-        int b = f0.denominator;
+        int a = this.numerator;
+        int b = this.denominator;
         int c = f1.numerator;
         int d = f1.denominator;
 
@@ -316,12 +316,14 @@ public class FractionImpl implements Fraction{
     public boolean equals(Object obj) {
         int value = 1;
         boolean result;
+
         if (obj instanceof Fraction){
             FractionImpl frac = (FractionImpl)obj;
             value = this.compareTo(frac);
         }else {
             throw new ClassCastException();
         }
+
         if (value == 0){
             result = true;
         }else {

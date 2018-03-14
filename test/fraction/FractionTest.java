@@ -26,7 +26,6 @@ public class FractionTest{
         //Test
         assertEquals(frac1, frac2.add(frac3));
 
-
     }
 
     @Test
