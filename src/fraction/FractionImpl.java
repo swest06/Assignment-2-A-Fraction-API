@@ -70,13 +70,13 @@ public class FractionImpl implements Fraction{
     public FractionImpl(String fraction) {
         if (fraction.contains(" ")){
             fraction = fraction.replaceAll("\\s","");
-            System.out.println(fraction);
         }
         if (fraction.contains("/")) {
 
             String[] section = fraction.split("/");
             int numerator = Integer.parseInt(section[0]);
             int denominator = Integer.parseInt(section[1]);
+
             init(numerator, denominator);
         }else{
             int numerator = Integer.parseInt(fraction);
