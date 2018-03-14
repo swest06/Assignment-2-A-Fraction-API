@@ -1,5 +1,7 @@
 package fraction;
 
+import java.lang.*;
+
 
 public class FractionImpl implements Fraction{
 
@@ -66,8 +68,12 @@ public class FractionImpl implements Fraction{
      * @param fraction the string representation of the fraction
      */
     public FractionImpl(String fraction) {
+        if (fraction.contains(" ")){
+            fraction = fraction.replaceAll("\\s","");
+            System.out.println(fraction);
+        }
+        if (fraction.contains("/")) {
 
-        if (fraction.contains("/") == true){
             String[] section = fraction.split("/");
             int numerator = Integer.parseInt(section[0]);
             int denominator = Integer.parseInt(section[1]);

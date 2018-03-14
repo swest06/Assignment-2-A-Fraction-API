@@ -8,8 +8,9 @@ public class Main {
 
     public  void run(){
         FractionImpl frac1 = new FractionImpl(1,4);
-        FractionImpl frac2 = new FractionImpl(18,12);
-        System.out.println(frac2);
+        FractionImpl frac2 = new FractionImpl(200,400);
+        FractionImpl frac3 = new FractionImpl("100  / 200");
+        System.out.println(frac3);
 
 //        FractionImpl frac2 = new FractionImpl(1,2);
 //        FractionImpl frac3 = new FractionImpl(3,4);
