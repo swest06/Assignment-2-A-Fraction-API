@@ -187,6 +187,15 @@ public class FractionImpl implements Fraction{
         return frac;
     }
 
+    private FractionImpl norm(int x, int y){
+
+        double sumDec = (float)x / y;
+        sumDec = sumDec * 100;
+        int sum = (int) sumDec;
+
+        return new FractionImpl(sum, 100);
+    }
+
     /**
      * @inheritDoc
      * Multiplies 2 fractions (sum = 'this' * 'that')
@@ -197,27 +206,13 @@ public class FractionImpl implements Fraction{
     public Fraction multiply(Fraction f) {
         //Typecast argument
         FractionImpl f1 = (FractionImpl)f;
-
-        //Assign Variables
-        int a = this.numerator;
-        int b = this.denominator;
-        int c = f1.numerator;
-        int d = f1.denominator;
-
+//
         //Multiply fractions
-        int x = (a*c);
-        int y = (b*d);
+        int x = (this.numerator * f1.numerator);
+        int y = (this.denominator * f1.denominator);
 
-        double sumDec = (float)x / y;
-
-        //double sumDec = (a*c) / (b*d);
-        sumDec = sumDec * 100;
-        int sum = (int) sumDec;
-
-        //Normalise fraction
-        FractionImpl frac = new FractionImpl(sum, 100);
-
-        return frac;
+        //Normalise
+        return norm(x,y);
     }
 
     /**
@@ -231,24 +226,12 @@ public class FractionImpl implements Fraction{
         //Typecast argument
         FractionImpl f1 = (FractionImpl)f;
 
-        //Assign Variables
-        int a = this.numerator;
-        int b = this.denominator;
-        int c = f1.numerator;
-        int d = f1.denominator;
-
         //Divide fractions
-        int x = (a*d);
-        int y = (b*c);
+        int x = (this.numerator * f1.denominator);
+        int y = (this.denominator * f1.numerator);
 
-        double sumDec = (float)x / y;
-        sumDec = sumDec * 100;
-        int sum = (int) sumDec;
-
-        //Normalise fraction
-        FractionImpl result = new FractionImpl(sum, 100);
-
-        return result;
+        //Normalise
+        return norm(x, y);
     }
 
     /**
@@ -295,7 +278,7 @@ public class FractionImpl implements Fraction{
 
         //Negate
         double sumDec = (float)a/b;
-        sumDec = (sumDec) - (sumDec * 2);
+        sumDec = (sumDec*-1);
         sumDec = sumDec * 100;
         int sum = (int) sumDec;
 
@@ -409,6 +392,12 @@ public class FractionImpl implements Fraction{
         }else{
             if (b == 1){
                 result = ""+a;
+            }else if ((a^b)<0){
+                result = "-"+a+"/"+b;
+
+                String[] sec = result.split("/");
+                 int x = Integer.parseInt(sec[1].replace("-",""));
+                 result = "-"+a+"/"+x;
             }else{
                 result = ""+a+"/"+b;
             }
