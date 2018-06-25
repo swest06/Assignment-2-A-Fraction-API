@@ -121,6 +121,15 @@ public class FractionImpl implements Fraction{
         }
     }
 
+    private FractionImpl norm(int x, int y){
+
+        double sumDec = (float)x / y;
+        sumDec = sumDec * 100;
+        int sum = (int) sumDec;
+
+        return new FractionImpl(sum, 100);
+    }
+
     /**
      * @inheritDoc
      * Adds 2 fraction objects (sum = 'this' + 'that')
@@ -130,7 +139,6 @@ public class FractionImpl implements Fraction{
     @Override
     public Fraction add(Fraction f) {
         //Typecast argument
-        FractionImpl f0 = (FractionImpl)this;
         FractionImpl f1 = (FractionImpl)f;
 
         //Assign Variables
@@ -144,15 +152,9 @@ public class FractionImpl implements Fraction{
 
         int x = (a*d + b*c);
         int y = (b*d);
-        double sumDec = (float)x / y;
 
-        sumDec = sumDec*100;
-        int sum = (int) sumDec;
-
-        //Normalise fraction
-        FractionImpl frac = new FractionImpl(sum, 100);
-
-        return frac;
+        //Normalise
+        return norm(x, y);
     }
 
     /**
@@ -176,25 +178,10 @@ public class FractionImpl implements Fraction{
         int x = (a*d - b*c);
         int y = (b*d);
 
-        double sumDec = (float)x / y;
-
-        sumDec = sumDec * 100;
-        int sum = (int) sumDec;
-
-        //Normalise fraction
-        FractionImpl frac = new FractionImpl(sum, 100);
-
-        return frac;
+        //Normalise
+        return norm(x, y);
     }
 
-    private FractionImpl norm(int x, int y){
-
-        double sumDec = (float)x / y;
-        sumDec = sumDec * 100;
-        int sum = (int) sumDec;
-
-        return new FractionImpl(sum, 100);
-    }
 
     /**
      * @inheritDoc
@@ -241,9 +228,6 @@ public class FractionImpl implements Fraction{
      */
     @Override
     public Fraction abs() {
-        //Typecast object
-        FractionImpl f1 = (FractionImpl)this;
-
         //Assign Variables
         int a = this.numerator;
         int b = this.denominator;
@@ -256,10 +240,7 @@ public class FractionImpl implements Fraction{
         sumDec = sumDec * 100;
         int sum = (int) sumDec;
 
-        //Normalise fraction
-        FractionImpl result = new FractionImpl(sum, 100);
-
-        return result;
+        return new FractionImpl(sum, 100);
     }
 
     /**
@@ -269,9 +250,6 @@ public class FractionImpl implements Fraction{
      */
     @Override
     public Fraction negate() {
-        //Typecast object
-        FractionImpl f1 = (FractionImpl)this;
-
         //Assign Variables
         int a = this.numerator;
         int b = this.denominator;
@@ -282,9 +260,7 @@ public class FractionImpl implements Fraction{
         sumDec = sumDec * 100;
         int sum = (int) sumDec;
 
-        //Normalise fraction
-        FractionImpl result = new FractionImpl(sum, 100);
-        return result;
+        return new FractionImpl(sum, 100);
     }
 
     /**
@@ -303,8 +279,7 @@ public class FractionImpl implements Fraction{
      */
     @Override
     public boolean equals(Object obj) {
-        int value = 1;
-        boolean result;
+        int value;
 
         if (obj instanceof Fraction){
             FractionImpl frac = (FractionImpl)obj;
@@ -313,12 +288,7 @@ public class FractionImpl implements Fraction{
             throw new ClassCastException();
         }
 
-        if (value == 0){
-            result = true;
-        }else {
-            result = false;
-        }
-        return result;
+        return value == 0;
     }
 
     /**
@@ -342,10 +312,7 @@ public class FractionImpl implements Fraction{
         int a = this.numerator;
         int b = this.denominator;
 
-        //Inverse
-        FractionImpl result = new FractionImpl(b,a);
-
-        return result;
+        return new FractionImpl(b,a);
     }
 
     /**
